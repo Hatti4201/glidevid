@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlideVid</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main>
+    <header><div class="mark">▶</div><div><h1>GlideVid</h1><small>Safari video gestures · v0.1</small></div></header>
+    <label class="switchrow">Enable player <input type="checkbox" id="enabled" checked /></label>
+    <section>
+      <h2>Touch gestures</h2>
+      <label>Double-tap skip <select id="doubleTapSeconds"><option value="10">10 sec</option><option value="15">15 sec</option><option value="20">20 sec</option><option value="30">30 sec</option></select></label>
+      <label>Swipe sensitivity <select id="seekSecondsPer40px"><option value="10">10 sec / 40px</option><option value="20">20 sec / 40px</option><option value="30">30 sec / 40px</option></select></label>
+      <label>Hold speed <select id="holdSpeed"><option value="1.5">1.5×</option><option value="2">2×</option><option value="2.5">2.5×</option></select></label>
+      <label>Hold + right <select id="rightSpeed"><option value="2">2×</option><option value="2.5">2.5×</option><option value="3">3×</option></select></label>
+      <label>Hold + left <select id="leftSpeed"><option value="0.5">0.5×</option><option value="1">1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+    </section>
+    <section>
+      <h2>Playback</h2>
+      <label class="switchrow">Remember speed <input id="rememberSpeed" type="checkbox" checked /></label>
+      <label class="switchrow">Remember progress <input id="rememberProgress" type="checkbox" checked /></label>
+      <label class="switchrow">Show screenshot button <input id="showCamera" type="checkbox" checked /></label>
+      <label>Auto-hide controls <select id="autoHideMs"><option value="2500">2.5 seconds</option><option value="3500">3.5 seconds</option><option value="5000">5 seconds</option><option value="8000">8 seconds</option></select></label>
+    </section>
+    <div class="footer"><span id="status" aria-live="polite">Ready</span><button type="button" id="reset">Clear playback history</button></div>
+    <p class="note">Runs only on pages you authorize in Safari. Screenshots may fail for cross-origin or protected video. Saved settings/history are local to this device.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Dependencies and local files
+node_modules/
+.DS_Store
+*.log
+.env
+.env.*
+
+# Xcode and Safari packaging outputs
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.ipa
+*.app/
